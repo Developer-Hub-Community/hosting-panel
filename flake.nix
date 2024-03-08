@@ -172,7 +172,7 @@
           buildInputs = [];
 
           buildPhase = ''
-            pnpm run build
+            yarn run build:production
           '';
 
           installPhase = ''
@@ -223,9 +223,8 @@
                   coreutils
                   mysql80
                   nodejs_18
-                  nodePackages.pnpm
+                  nodePackages.yarn
                   php81WithExtensions
-                  postgresql_15
                 ];
                 pathsToLink = ["/bin" "/etc"];
               };
